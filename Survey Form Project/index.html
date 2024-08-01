@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Registration Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please fill out this survey to improve the user experience</p>
+        <form id="survey-form">
+            <fieldset>
+                <label id="name" for="name">Please enter your name: <input id="name" type="text" name="name" placeholder="Johann" required></label>
+                <label id="email" for="email">Please enter your email: <input id="email" type="email" minlength="8" name="email" placeholder="name@gmail.com" required></label>
+                <label id="number" for="age">Please enter your age: <input id="number" type="number" min="13" max="120" pattern="[0-9]" name="age" required placeholder="13"></label>
+                <label for="rating">How would you rate your experience?
+                    <select id="dropdown" name="rating" required>
+                        <option value="">
+                            select one
+                        </option>
+
+                        <option value="1">
+                            Good
+                        </option>
+
+                        <option value="2">
+                            Okay
+                        </option>
+
+                        <option value="3">
+                            Bad
+                        </option>
+                    </select>
+                </label>
+
+                <label for="comment">Provide additional comments:<textarea id="comment" rows="5" cols="50" placeholder="Feedback" name="comment"></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account type (required)</legend>
+                    <label for="personal-account">
+                        <input class="inline" id="personal-account" type="radio" name="account-type" value="personal-account" checked> Personal
+                    </label>
+
+                    <label for="business-account">
+                        <input class="inline" id="business-account" type="radio" name="account-type" value="business-account"> Business
+                    </label>
+             </fieldset>
+
+             <label for="terms-and-conditions">
+                <input class="inline" id="terms-and-conditions" type="checkbox" name="terms-and-conditions" value="terms-and-conditions" required>  I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/"> terms and conditions</a>
+            </label>
+
+            <label for="acknowledgement">
+                <input class="inline" id="acknowledgement" type="checkbox" name="acknowledgement" value="acknowledgement" required>  I confirm my voluntary participation in this survey
+            </label>
+
+            <input id="submit" type="submit" button value="Submit">
+            </form>
+    </body>
+</html>
